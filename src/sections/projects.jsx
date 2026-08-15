@@ -99,7 +99,7 @@ const projects = [
         id: 4,
         title: "Dormitory Management System",
         description:
-            "A C# desktop application developed to manage dormitory-related records, including tenant information and room assignments. The project demonstrates the use of C# and SQL Server to create a database-driven management application.",
+            "A C# desktop application developed to manage dormitory-related records, including tenant information and room assignments.",
         stack: [
             { name: "C#", icon: FiCode },
             { name: "SQL Server", icon: BsDatabaseFill }
