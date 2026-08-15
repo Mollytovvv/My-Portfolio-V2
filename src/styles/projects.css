@@ -1,0 +1,627 @@
+/* =====================================
+   PROJECTS
+===================================== */
+
+.projects {
+    padding: 160px 0 120px;
+}
+
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.section-header {
+    margin-bottom: 80px;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 18px;
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 999px;
+
+    background: rgba(59,130,246,.08);
+
+    color: var(--primary);
+
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--text);
+
+    font-size: clamp(2.8rem,5vw,3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.section-header p {
+    max-width: 720px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+
+/* =====================================
+   GRID
+===================================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,minmax(0,1fr));
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* =====================================
+   CARD
+===================================== */
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.03),
+            rgba(255,255,255,.015)
+        );
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-12px)
+        scale(1.01);
+
+    border-color: rgba(59,130,246,.35);
+
+    box-shadow:
+        0 28px 60px rgba(0,0,0,.30);
+}
+
+
+/* =====================================
+   PROJECT PREVIEW
+===================================== */
+
+.project-preview {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid rgba(255,255,255,.06);
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(59,130,246,.12),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.04),
+            rgba(255,255,255,.01)
+        );
+}
+
+
+/* =====================================
+   PROJECT IMAGE
+===================================== */
+
+.project-preview img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .6s ease;
+}
+
+.project-card:hover .project-preview img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================
+   EMPTY PREVIEW
+===================================== */
+
+.project-preview span {
+    color: var(--text-secondary);
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 32px;
+}
+
+.project-content h3 {
+    margin-bottom: 14px;
+
+    color: var(--text);
+
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.project-content p {
+    margin-bottom: 26px;
+
+    color: var(--text-secondary);
+
+    line-height: 1.85;
+}
+
+
+/* =====================================
+   TECH STACK
+===================================== */
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.project-stack span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.03);
+
+    color: var(--text-secondary);
+
+    font-size: .78rem;
+    font-weight: 600;
+
+    transition: all .25s ease;
+}
+
+.project-stack span svg {
+    font-size: .95rem;
+}
+
+.project-stack span:hover {
+    color: var(--text);
+
+    background: rgba(59,130,246,.08);
+
+    border-color: rgba(59,130,246,.35);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   ACTIONS
+===================================== */
+
+.project-actions {
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: auto;
+}
+
+.project-actions a {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 14px 20px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all .25s ease;
+}
+
+.project-actions a svg {
+    font-size: 1rem;
+}
+
+
+/* =====================================
+   LIVE DEMO
+===================================== */
+
+.project-actions a:last-child {
+    background: var(--primary);
+
+    color: #fff;
+}
+
+.project-actions a:last-child:hover {
+    background: var(--primary-hover);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   GITHUB
+===================================== */
+
+.project-actions a:first-child {
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: transparent;
+
+    color: var(--text);
+}
+
+.project-actions a:first-child:hover {
+    background: rgba(255,255,255,.04);
+
+    border-color: rgba(59,130,246,.35);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DISABLED
+===================================== */
+
+.project-actions a.disabled {
+    opacity: .45;
+
+    pointer-events: none;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media(max-width:768px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:768px) {
+
+    .projects {
+        padding: 90px 0 80px;
+    }
+
+    .section-header {
+        margin-bottom: 48px;
+
+        text-align: center;
+    }
+
+    .section-label {
+        margin-bottom: 18px;
+
+        padding: 7px 15px;
+
+        font-size: .72rem;
+    }
+
+    .section-header h2 {
+        margin-bottom: 16px;
+
+        font-size: clamp(2.3rem,10vw,3rem);
+
+        line-height: 1.1;
+
+        letter-spacing: -1.5px;
+    }
+
+    .section-header p {
+        max-width: 330px;
+
+        margin: 0 auto;
+
+        font-size: .94rem;
+
+        line-height: 1.75;
+
+        text-align: center;
+    }
+
+
+    /* ================================
+       PROJECT GRID
+    ================================ */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+
+    /* ================================
+       PROJECT CARD
+    ================================ */
+
+    .project-card {
+        border-radius: 22px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-6px);
+    }
+
+
+    /* ================================
+       PROJECT PREVIEW
+    ================================ */
+
+    .project-preview {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    /* ================================
+       PROJECT CONTENT
+    ================================ */
+
+    .project-content {
+        padding: 24px 22px 22px;
+    }
+
+    .project-content h3 {
+        margin-bottom: 12px;
+
+        font-size: 1.4rem;
+
+        line-height: 1.3;
+    }
+
+    .project-content p {
+        margin-bottom: 22px;
+
+        font-size: .94rem;
+
+        line-height: 1.75;
+    }
+
+
+    /* ================================
+       TECH STACK
+    ================================ */
+
+    .project-stack {
+        gap: 8px;
+
+        margin-bottom: 24px;
+    }
+
+    .project-stack span {
+        padding: 8px 11px;
+
+        gap: 6px;
+
+        font-size: .72rem;
+    }
+
+    .project-stack span svg {
+        font-size: .85rem;
+    }
+
+
+    /* ================================
+       ACTIONS
+    ================================ */
+
+    .project-actions {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .project-actions a {
+        width: 100%;
+
+        padding: 13px 18px;
+
+        border-radius: 12px;
+
+        font-size: .9rem;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media(max-width:400px) {
+
+    .projects {
+        padding: 80px 0 70px;
+    }
+
+    .section-header {
+        margin-bottom: 42px;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-header p {
+        max-width: 300px;
+
+        font-size: .9rem;
+
+        line-height: 1.7;
+    }
+
+    .projects-grid {
+        gap: 20px;
+    }
+
+    .project-content {
+        padding: 21px 18px 19px;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-content p {
+        font-size: .9rem;
+    }
+
+    .project-stack span {
+        padding: 7px 10px;
+
+        font-size: .68rem;
+    }
+
+}
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+[data-theme="light"] .project-card {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border: 1px solid #d7e0ec;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.05);
+}
+
+[data-theme="light"] .project-card:hover {
+    border-color: rgba(37,99,235,.35);
+
+    box-shadow:
+        0 18px 40px rgba(15,23,42,.10);
+}
+
+[data-theme="light"] .project-preview {
+    border-bottom: 1px solid #e2e8f0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(37,99,235,.08),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafc
+        );
+}
+
+[data-theme="light"] .project-stack span {
+    background: #ffffff;
+
+    border: 1px solid #d7e0ec;
+
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .project-stack span:hover {
+    background: rgba(37,99,235,.08);
+
+    border-color: rgba(37,99,235,.30);
+
+    color: var(--text);
+}
+
+[data-theme="light"] .project-actions a:first-child {
+    background: #ffffff;
+
+    border: 1px solid #d7e0ec;
+}
+
+[data-theme="light"] .project-actions a:first-child:hover {
+    background: #f8fafc;
+
+    border-color: rgba(37,99,235,.35);
+}

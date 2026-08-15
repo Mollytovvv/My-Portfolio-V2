@@ -1,0 +1,658 @@
+/* =====================================
+   CONTACT
+===================================== */
+
+.contacts{
+
+    position:relative;
+
+    padding:140px 0 120px;
+
+    overflow:hidden;
+
+}
+
+.contacts::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-180px;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.08);
+
+    filter:blur(120px);
+
+    pointer-events:none;
+
+}
+
+
+
+/* =====================================
+   GRID
+===================================== */
+
+.contacts-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:26px;
+
+    margin-top:70px;
+
+}
+
+
+
+/* =====================================
+   CARD
+===================================== */
+
+.contact-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:24px;
+
+    padding:32px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.035),
+
+            rgba(255,255,255,.015)
+
+        );
+
+    backdrop-filter:blur(16px);
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top right,
+
+            rgba(59,130,246,.15),
+
+            transparent 65%
+
+        );
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    pointer-events:none;
+
+}
+
+.contact-card:hover{
+
+    transform:
+
+        translateY(-10px)
+
+        scale(1.015);
+
+    border-color:rgba(59,130,246,.32);
+
+    box-shadow:
+
+        0 26px 60px rgba(0,0,0,.28);
+
+}
+
+.contact-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+
+/* =====================================
+   ICON
+===================================== */
+
+.contact-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(59,130,246,.18);
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(59,130,246,.16),
+
+            rgba(59,130,246,.05)
+
+        );
+
+    color:var(--primary);
+
+    font-size:1.8rem;
+
+    transition:
+
+        transform .3s ease,
+
+        border-color .3s ease;
+
+}
+
+.contact-card:hover .contact-icon{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+
+}
+
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.contact-content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.contact-title{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+
+    font-size:.74rem;
+
+    font-weight:700;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+}
+
+.contact-content h3{
+
+    color:var(--text);
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    word-break:break-word;
+
+}
+
+/* =====================================
+   ARROW
+===================================== */
+
+.contact-arrow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    color:var(--text-secondary);
+
+    font-size:1.1rem;
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease,
+
+        border-color .3s ease,
+
+        color .3s ease;
+
+}
+
+.contact-card:hover .contact-arrow{
+
+    color:var(--text);
+
+    background:rgba(59,130,246,.10);
+
+    border-color:rgba(59,130,246,.35);
+
+    transform:
+
+        translate(4px,-4px)
+
+        rotate(8deg);
+
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.contact-footer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:100px;
+
+    padding-top:42px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.contact-footer p{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    letter-spacing:.02em;
+
+}
+
+.contact-footer span{
+
+    color:var(--text-secondary);
+
+    font-size:.9rem;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media(max-width:1100px){
+
+    .contacts-grid{
+
+        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        gap:20px;
+
+    }
+
+    .contact-card{
+
+        padding:26px;
+
+        gap:18px;
+
+    }
+
+    .contact-icon{
+
+        width:64px;
+
+        height:64px;
+
+        font-size:1.6rem;
+
+    }
+
+    .contact-content h3{
+
+        font-size:1rem;
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:768px){
+
+    .contacts{
+
+        padding:90px 0;
+
+    }
+
+    .contacts-grid{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+        margin-top:45px;
+
+    }
+
+    .contact-card{
+
+        padding:20px;
+
+        gap:16px;
+
+        border-radius:20px;
+
+    }
+
+    .contact-icon{
+
+        width:58px;
+
+        height:58px;
+
+        border-radius:17px;
+
+        font-size:1.45rem;
+
+    }
+
+    .contact-title{
+
+        margin-bottom:6px;
+
+        font-size:.68rem;
+
+    }
+
+    .contact-content h3{
+
+        font-size:.92rem;
+
+        line-height:1.4;
+
+    }
+
+    .contact-arrow{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:.95rem;
+
+    }
+
+    .contact-footer{
+
+        margin-top:65px;
+
+        padding-top:32px;
+
+    }
+
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media(max-width:480px){
+
+    .contact-card{
+
+        flex-direction:row;
+
+        align-items:center;
+
+        text-align:left;
+
+        gap:14px;
+
+        padding:18px;
+
+    }
+
+    .contact-icon{
+
+        width:52px;
+
+        height:52px;
+
+        border-radius:15px;
+
+        font-size:1.3rem;
+
+    }
+
+    .contact-content{
+
+        flex:1;
+
+        width:auto;
+
+        min-width:0;
+
+    }
+
+    .contact-title{
+
+        margin-bottom:5px;
+
+        font-size:.62rem;
+
+        letter-spacing:.12em;
+
+    }
+
+    .contact-content h3{
+
+        font-size:.82rem;
+
+        line-height:1.35;
+
+        overflow-wrap:anywhere;
+
+    }
+
+    .contact-arrow{
+
+        width:36px;
+
+        height:36px;
+
+        font-size:.85rem;
+
+    }
+
+    .contact-footer{
+
+        gap:5px;
+
+        margin-top:55px;
+
+    }
+
+    .contact-footer p{
+
+        font-size:.82rem;
+
+    }
+
+    .contact-footer span{
+
+        font-size:.74rem;
+
+    }
+
+}
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+[data-theme="light"] .skill-card{
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fafc
+    );
+
+    border:1px solid #d7e0ec;
+
+    box-shadow:
+        0 10px 28px rgba(15,23,42,.05);
+
+}
+
+[data-theme="light"] .skill-card:hover{
+
+    border-color:rgba(37,99,235,.30);
+
+    box-shadow:
+        0 20px 45px rgba(15,23,42,.10);
+
+}
+
+[data-theme="light"] .skill-card::before{
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37,99,235,.08),
+            transparent 60%
+        );
+
+}
+
+[data-theme="light"] .skill-icon-wrapper{
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.12),
+            rgba(37,99,235,.03)
+        );
+
+    border:1px solid rgba(37,99,235,.18);
+
+}
+
+[data-theme="light"] .skill-pill{
+
+    background:#ffffff;
+
+    border:1px solid #d7e0ec;
+
+    color:var(--text-secondary);
+
+}
+
+[data-theme="light"] .skill-pill:hover{
+
+    background:rgba(37,99,235,.08);
+
+    border-color:rgba(37,99,235,.30);
+
+    color:var(--text);
+
+    box-shadow:
+        0 8px 18px rgba(37,99,235,.10);
+
+}

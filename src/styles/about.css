@@ -1,0 +1,115 @@
+/* =====================================
+   ABOUT
+===================================== */
+
+.about{
+
+    padding:120px 0;
+
+}
+
+
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.about .section-header{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+
+
+.about .section-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    margin-bottom:20px;
+
+    border:1px solid rgba(59,130,246,.2);
+
+    border-radius:999px;
+
+    background:rgba(59,130,246,.08);
+
+    color:var(--primary);
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.about h2{
+
+    margin-bottom:24px;
+
+    color:var(--text);
+
+    font-size:clamp(2.2rem,5vw,3.2rem);
+
+    line-height:1.15;
+
+    font-weight:700;
+
+}
+
+
+
+.about p{
+
+    color:var(--text-secondary);
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+}
+
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:768px){
+
+    .about{
+
+        padding:90px 0;
+
+    }
+
+    .about h2{
+
+        margin-bottom:20px;
+
+    }
+
+    .about p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+}

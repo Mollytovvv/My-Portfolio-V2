@@ -1,0 +1,282 @@
+import { useState } from "react";
+
+import {
+    SiReact,
+    SiVite,
+    SiNodedotjs,
+    SiExpress,
+    SiSocketdotio,
+    SiMongodb,
+    SiPython,
+    SiHtml5,
+    SiCss,
+    SiJavascript,
+    SiPostgresql,
+    SiPhp,
+    SiMysql,
+    SiGithub
+} from "react-icons/si";
+
+import {
+    FiExternalLink,
+    FiCode
+} from "react-icons/fi";
+
+import { BsDatabaseFill } from "react-icons/bs";
+
+import { motion } from "framer-motion";
+import {
+    fadeUp,
+    staggerContainer
+} from "../animations/animations";
+
+import "../styles/projects.css";
+
+import serviceDeskImage from "../assets/projects/service-desk/home-service-desk.jpg";
+import inventoryImage from "../assets/projects/inventory/home-inventory-analytics.jpg";
+import barangayImage from "../assets/projects/barangay/home-barangay-management.jpg";
+import dormitoryImage from "../assets/projects/dormitory/home-dormitory-management.jpg";
+
+const projects = [
+    {
+        id: 1,
+        title: "MollyTech Service Desk",
+        description:
+            "A full-stack IT support platform designed to manage tickets, conversations, and support workflows through a centralized service desk system.",
+        stack: [
+            { name: "React", icon: SiReact },
+            { name: "Vite", icon: SiVite },
+            { name: "Node.js", icon: SiNodedotjs },
+            { name: "Express", icon: SiExpress },
+            { name: "Socket.IO", icon: SiSocketdotio },
+            { name: "MongoDB", icon: SiMongodb }
+        ],
+        github: "",
+        demo: "",
+        images: [serviceDeskImage],
+        imageClass: "service-desk-image"
+    },
+
+    {
+        id: 2,
+        title: "MollyTech Inventory Analytics",
+        description:
+            "A web-based inventory management and analytics platform that helps monitor inventory, visualize business data, and improve operational decision-making through interactive dashboards.",
+        stack: [
+            { name: "Python", icon: SiPython },
+            { name: "HTML5", icon: SiHtml5 },
+            { name: "CSS3", icon: SiCss },
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "PostgreSQL", icon: SiPostgresql }
+        ],
+        github: "",
+        demo: "",
+        images: [inventoryImage],
+        imageClass: "inventory-image"
+    },
+
+    {
+        id: 3,
+        title: "Barangay Management System",
+        description:
+            "A web-based platform that digitizes barangay services by simplifying resident records, document requests, and administrative processes.",
+        stack: [
+            { name: "HTML5", icon: SiHtml5 },
+            { name: "CSS3", icon: SiCss },
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "PHP", icon: SiPhp },
+            { name: "MySQL", icon: SiMysql }
+        ],
+        github: "",
+        demo: "",
+        images: [barangayImage],
+
+        previewClass: "barangay-preview",
+        imageClass: "barangay-image"
+    },
+
+    {
+        id: 4,
+        title: "Dormitory Management System",
+        description:
+            "A desktop-based management system developed to manage tenants, room assignments, billing, and payment records for dormitory operations.",
+        stack: [
+            { name: "C#", icon: FiCode },
+            { name: "SQL Server", icon: BsDatabaseFill }
+        ],
+        github: "",
+        demo: "",
+        images: [dormitoryImage],
+        imageClass: "dormitory-image"
+    }
+];
+
+export default function Projects() {
+
+    const [activeImages, setActiveImages] = useState({});
+
+    return (
+
+        <section
+            id="projects"
+            className="projects"
+        >
+
+            <div className="container">
+
+                <div className="section-header">
+
+                    <span className="section-label">
+                        Portfolio
+                    </span>
+
+                    <h2>
+                        Projects
+                    </h2>
+
+                    <p>
+                        A collection of software solutions I've designed and developed, ranging from desktop applications to full-stack web platforms.
+                    </p>
+
+                </div>
+
+                <motion.div
+                    className="projects-grid"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{
+                        once: true,
+                        amount: 0.2
+                    }}
+                >
+
+                    {projects.map((project) => (
+
+                        <motion.article
+                            key={project.id}
+                            className={`project-card ${project.featured ? "featured" : ""}`}
+                            variants={fadeUp}
+                            whileHover={{
+                                y: -8
+                            }}
+                            transition={{
+                                duration: 0.25
+                            }}
+                        >
+
+                            <div className={`project-preview ${project.imageClass || ""}`}>
+
+                                {project.featured && (
+
+                                    <span className="project-badge">
+                                        Featured
+                                    </span>
+
+                                )}
+
+                                {project.images.length > 0 ? (
+
+                                    <div className="project-carousel">
+
+                                    <img
+                                        src={project.images[activeImages[project.id] || 0]}
+                                        alt={`${project.title} preview`}
+                                        className={`${project.title === "MollyTech Inventory Analytics" ? "inventory-image" : ""}`}
+                                    />
+
+                                    </div>
+
+                                ) : (
+
+                                    <span>
+                                        Project Preview
+                                    </span>
+
+                                )}
+
+                            </div>
+
+                            <div className="project-content">
+
+                                <h3>
+                                    {project.title}
+                                </h3>
+
+                                <p>
+                                    {project.description}
+                                </p>
+
+                                <div className="project-stack">
+
+                                    {project.stack.map((tech) => {
+
+                                        const Icon = tech.icon;
+
+                                        return (
+
+                                            <span key={tech.name}>
+
+                                                <Icon />
+
+                                                {tech.name}
+
+                                            </span>
+
+                                        );
+
+                                    })}
+
+                                </div>
+
+                                <div className="project-actions">
+
+                                    <a
+                                        href={project.github || "#"}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={!project.github ? "disabled" : ""}
+                                        onClick={(e) => {
+                                            if (!project.github) e.preventDefault();
+                                        }}
+                                    >
+
+                                        <SiGithub />
+
+                                        GitHub
+
+                                    </a>
+
+                                    <a
+                                        href={project.demo || "#"}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={!project.demo ? "disabled" : ""}
+                                        onClick={(e) => {
+                                            if (!project.demo) e.preventDefault();
+                                        }}
+                                    >
+
+                                        <FiExternalLink />
+
+                                        Live Demo
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </motion.article>
+
+                    ))}
+
+                </motion.div>
+
+            </div>
+
+        </section>
+
+    );
+
+}
