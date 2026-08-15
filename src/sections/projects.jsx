@@ -42,7 +42,7 @@ const projects = [
         id: 1,
         title: "MollyTech Service Desk",
         description:
-            "A full-stack IT support platform designed to manage tickets, conversations, and support workflows through a centralized service desk system.",
+            "A full-stack IT support platform developed to manage support tickets and user interactions through a centralized interface. The project includes ticket management, user and admin workflows, notifications, and real-time messaging.",
         stack: [
             { name: "React", icon: SiReact },
             { name: "Vite", icon: SiVite },
@@ -61,7 +61,7 @@ const projects = [
         id: 2,
         title: "MollyTech Inventory Analytics",
         description:
-            "A web-based inventory management and analytics platform that helps monitor inventory, visualize business data, and improve operational decision-making through interactive dashboards.",
+            "A web-based inventory management project focused on recording inventory data and presenting it through an analytics dashboard. The project combines inventory management with data visualization to make inventory information easier to monitor and review.",
         stack: [
             { name: "Python", icon: SiPython },
             { name: "HTML5", icon: SiHtml5 },
@@ -79,7 +79,7 @@ const projects = [
         id: 3,
         title: "Barangay Management System",
         description:
-            "A web-based platform that digitizes barangay services by simplifying resident records, document requests, and administrative processes.",
+            "A web-based barangay management project developed to organize resident information and selected administrative records through a centralized system. It demonstrates the use of PHP and MySQL to manage and present barangay-related data through a browser-based interface.",
         stack: [
             { name: "HTML5", icon: SiHtml5 },
             { name: "CSS3", icon: SiCss },
@@ -99,7 +99,7 @@ const projects = [
         id: 4,
         title: "Dormitory Management System",
         description:
-            "A desktop-based management system developed to manage tenants, room assignments, billing, and payment records for dormitory operations.",
+            "A C# desktop application developed to manage dormitory-related records, including tenant information and room assignments. The project demonstrates the use of C# and SQL Server to create a database-driven management application.",
         stack: [
             { name: "C#", icon: FiCode },
             { name: "SQL Server", icon: BsDatabaseFill }
@@ -135,7 +135,7 @@ export default function Projects() {
                     </h2>
 
                     <p>
-                        A collection of software solutions I've designed and developed, ranging from desktop applications to full-stack web platforms.
+                        A collection of software projects I've designed and developed across web, desktop, database, and analytics applications.
                     </p>
 
                 </div>
