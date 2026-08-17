@@ -79,7 +79,7 @@ const projects = [
         id: 3,
         title: "Barangay Management System",
         description:
-            "A web-based barangay management project developed to organize resident information and selected administrative records through a centralized system. It demonstrates the use of PHP and MySQL to manage and present barangay-related data through a browser-based interface.",
+            "A full-stack Barangay Management System developed for Barangay Manresa in Quezon City to streamline resident services, document requests, complaint handling, announcements, and administrative records through a centralized web-based platform.",
         stack: [
             { name: "HTML5", icon: SiHtml5 },
             { name: "CSS3", icon: SiCss },
