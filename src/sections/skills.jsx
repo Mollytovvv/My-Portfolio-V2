@@ -23,6 +23,7 @@ import {
     SiExpress,
     SiPhp,
     SiPython,
+    SiFlask,
     SiMongodb,
     SiMysql,
     SiPostgresql,
@@ -67,6 +68,7 @@ const skillGroups = [
             { name: "Express", icon: SiExpress },
             { name: "PHP", icon: SiPhp },
             { name: "Python", icon: SiPython },
+            { name: "Flask", icon: SiFlask },
             { name: "C#", icon: FiCode }
         ]
     },
@@ -124,23 +126,17 @@ export default function Skills() {
                 >
 
                     <span className="section-label">
-
                         Technologies
-
                     </span>
 
                     <h2>
-
                         Tech Stack
-
                     </h2>
 
                     <p>
-
                         Technologies, frameworks, databases, and
                         development tools I use to build modern
                         web applications and software solutions.
-
                     </p>
 
                 </motion.div>
@@ -157,7 +153,6 @@ export default function Skills() {
                 >
 
                     {
-
                         skillGroups.map((group) => {
 
                             const GroupIcon = group.icon;
@@ -165,18 +160,13 @@ export default function Skills() {
                             return (
 
                                 <motion.article
-
                                     key={group.title}
-
                                     className="skill-card"
-
                                     variants={fadeUp}
-
                                     whileHover={{
                                         y: -10,
                                         scale: 1.015
                                     }}
-
                                 >
 
                                     <div className="skill-card-header">
@@ -192,9 +182,7 @@ export default function Skills() {
                                         <div className="skill-card-info">
 
                                             <h3>
-
                                                 {group.title}
-
                                             </h3>
 
                                         </div>
@@ -204,7 +192,6 @@ export default function Skills() {
                                     <div className="skill-list">
 
                                         {
-
                                             group.skills.map((skill) => {
 
                                                 const SkillIcon = skill.icon;
@@ -212,24 +199,18 @@ export default function Skills() {
                                                 return (
 
                                                     <motion.span
-
                                                         key={skill.name}
-
                                                         className="skill-pill"
-
                                                         whileHover={{
                                                             y: -3,
                                                             scale: 1.04
                                                         }}
-
                                                         whileTap={{
                                                             scale: .96
                                                         }}
-
                                                         transition={{
                                                             duration: .2
                                                         }}
-
                                                     >
 
                                                         <SkillIcon />
@@ -241,7 +222,6 @@ export default function Skills() {
                                                 );
 
                                             })
-
                                         }
 
                                     </div>
@@ -251,7 +231,6 @@ export default function Skills() {
                             );
 
                         })
-
                     }
 
                 </motion.div>

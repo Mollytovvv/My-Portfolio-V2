@@ -23,6 +23,7 @@ import {
 } from "react-icons/fi";
 
 import { BsDatabaseFill } from "react-icons/bs";
+import { SiFlask } from "react-icons/si";
 
 import { motion } from "framer-motion";
 import {
@@ -61,9 +62,10 @@ const projects = [
         id: 2,
         title: "MollyTech Inventory Analytics",
         description:
-            "A web-based inventory management project focused on recording inventory data and presenting it through an analytics dashboard. The project combines inventory management with data visualization to make inventory information easier to monitor and review.",
+            "A web-based inventory and business analytics system built for a small buy-and-sell operation. The system automates inventory tracking, sales records, revenue and profit calculations, and presents business performance through an analytics dashboard.",
         stack: [
             { name: "Python", icon: SiPython },
+            { name: "Flask", icon: SiFlask },
             { name: "HTML5", icon: SiHtml5 },
             { name: "CSS3", icon: SiCss },
             { name: "JavaScript", icon: SiJavascript },
