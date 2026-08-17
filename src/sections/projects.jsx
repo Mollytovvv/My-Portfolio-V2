@@ -43,7 +43,7 @@ const projects = [
         id: 1,
         title: "MollyTech Service Desk",
         description:
-            "A full-stack IT support platform developed to manage support tickets and user interactions through a centralized interface. The project includes ticket management, user and admin workflows, notifications, and real-time messaging.",
+            "A full-stack IT service desk platform engineered to simulate a real-world technical support environment. The system manages the complete support workflow from ticket submission and administrative assignment to technician handling, real-time messaging, notifications, and ticket resolution across user, IT support, technician, and administrator roles.",
         stack: [
             { name: "React", icon: SiReact },
             { name: "Vite", icon: SiVite },
