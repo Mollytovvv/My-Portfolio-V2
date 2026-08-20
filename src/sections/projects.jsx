@@ -52,7 +52,7 @@ const projects = [
             { name: "Socket.IO", icon: SiSocketdotio },
             { name: "MongoDB", icon: SiMongodb }
         ],
-        github: "",
+        github: "https://github.com/Mollytovvv/MollyTech-Service-Desk",
         demo: "",
         images: [serviceDeskImage],
         imageClass: "service-desk-image"
@@ -71,7 +71,7 @@ const projects = [
             { name: "JavaScript", icon: SiJavascript },
             { name: "PostgreSQL", icon: SiPostgresql }
         ],
-        github: "",
+        github: "https://github.com/Mollytovvv/MollyTech-Inventory-Analytics-System",
         demo: "",
         images: [inventoryImage],
         imageClass: "inventory-image"
@@ -89,10 +89,9 @@ const projects = [
             { name: "PHP", icon: SiPhp },
             { name: "MySQL", icon: SiMysql }
         ],
-        github: "",
+        github: "https://github.com/Mollytovvv/Barangay-Management-System",
         demo: "",
         images: [barangayImage],
-
         previewClass: "barangay-preview",
         imageClass: "barangay-image"
     },
@@ -106,7 +105,7 @@ const projects = [
             { name: "C#", icon: FiCode },
             { name: "SQL Server", icon: BsDatabaseFill }
         ],
-        github: "",
+        github: "https://github.com/Mollytovvv/Dormitory-Management-System",
         demo: "",
         images: [dormitoryImage],
         imageClass: "dormitory-image"
