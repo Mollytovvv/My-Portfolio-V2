@@ -101,13 +101,11 @@ export default function Hero() {
                         </a>
 
                         <a
-                            href="/resume.pdf"
+                            href="https://www.ralphmolina.dev/resume.pdf"
                             className="secondary-btn"
                             download
                         >
-
-                            Download Résumé
-
+                            Download Resume
                         </a>
 
                     </motion.div>

@@ -38,8 +38,8 @@ const contacts = [
     },
 
     {
-        title: "Résumé",
-        value: "Download Résumé",
+        title: "Resume",
+        value: "Download Resume",
         icon: <FiDownload />,
         link: "/resume.pdf"
     }
@@ -110,7 +110,7 @@ export default function Contacts() {
                         
                             key={contact.title}
                             href={contact.link}
-                            download={contact.title === "Résumé" ? true : undefined}
+                            download={contact.title === "Resume" ? true : undefined}
 
                                 className="contact-card"
 
