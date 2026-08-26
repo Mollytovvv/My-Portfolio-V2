@@ -19,7 +19,8 @@ import {
 
 import {
     FiExternalLink,
-    FiCode
+    FiCode,
+    FiYoutube
 } from "react-icons/fi";
 
 import { BsDatabaseFill } from "react-icons/bs";
@@ -53,7 +54,7 @@ const projects = [
             { name: "MongoDB", icon: SiMongodb }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Service-Desk",
-        demo: "",
+        demo: "https://youtu.be/_bTyL3zbJE0",
         images: [serviceDeskImage],
         imageClass: "service-desk-image"
     },
@@ -72,7 +73,7 @@ const projects = [
             { name: "PostgreSQL", icon: SiPostgresql }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Inventory-Analytics-System",
-        demo: "",
+        demo: "https://youtu.be/4bUfA9BGEfk",
         images: [inventoryImage],
         imageClass: "inventory-image"
     },
@@ -90,7 +91,7 @@ const projects = [
             { name: "MySQL", icon: SiMysql }
         ],
         github: "https://github.com/Mollytovvv/Barangay-Management-System",
-        demo: "",
+        demo: "https://youtu.be/GhK7YNUlTw4",
         images: [barangayImage],
         previewClass: "barangay-preview",
         imageClass: "barangay-image"
@@ -106,7 +107,7 @@ const projects = [
             { name: "SQL Server", icon: BsDatabaseFill }
         ],
         github: "https://github.com/Mollytovvv/Dormitory-Management-System",
-        demo: "",
+        demo: "https://youtu.be/ICBxDq11q1I",
         images: [dormitoryImage],
         imageClass: "dormitory-image"
     }
