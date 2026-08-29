@@ -54,7 +54,7 @@ const projects = [
             { name: "MongoDB", icon: SiMongodb }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Service-Desk",
-        live: "mollytech-service-desk.ralphmolina.dev",
+        live: "https://mollytech-service-desk.ralphmolina.dev/",
         youtube: "https://youtu.be/_bTyL3zbJE0",
         images: [serviceDeskImage],
         imageClass: "service-desk-image"
@@ -74,7 +74,7 @@ const projects = [
             { name: "PostgreSQL", icon: SiPostgresql }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Inventory-Analytics-System",
-        live: "mollytech-inventory-analytics.ralphmolina.dev",
+        live: "https://mollytech-inventory-analytics.ralphmolina.dev/",
         youtube: "https://youtu.be/4bUfA9BGEfk",
         images: [inventoryImage],
         imageClass: "inventory-image"
