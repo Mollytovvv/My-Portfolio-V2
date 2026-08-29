@@ -54,8 +54,8 @@ const projects = [
             { name: "MongoDB", icon: SiMongodb }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Service-Desk",
-        live: "https://mollytech-service-desk.ralphmolina.dev/",
         demo: "https://youtu.be/_bTyL3zbJE0",
+        live: "https://mollytech-service-desk.ralphmolina.dev/",
         images: [serviceDeskImage],
         imageClass: "service-desk-image"
     },
@@ -74,8 +74,8 @@ const projects = [
             { name: "PostgreSQL", icon: SiPostgresql }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Inventory-Analytics-System",
-        live: "https://mollytech-inventory-analytics.ralphmolina.dev/login",
         demo: "https://youtu.be/4bUfA9BGEfk",
+        live: "https://mollytech-inventory-analytics.ralphmolina.dev/login",
         images: [inventoryImage],
         imageClass: "inventory-image"
     },
@@ -248,6 +248,17 @@ export default function Projects() {
                                         GitHub
                                     </a>
 
+                                    {project.demo && (
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="demo-video"
+                                        >
+                                            <FiYoutube />
+                                            Demo Video
+                                        </a>
+                                    )}
 
                                     {project.live && (
                                         <a
@@ -258,19 +269,6 @@ export default function Projects() {
                                         >
                                             <FiExternalLink />
                                             Live Application
-                                        </a>
-                                    )}
-
-
-                                    {project.demo && (
-                                        <a
-                                            href={project.demo}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="demo-video"
-                                        >
-                                            <FiYoutube />
-                                            Demo Video
                                         </a>
                                     )}
 
