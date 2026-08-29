@@ -54,7 +54,8 @@ const projects = [
             { name: "MongoDB", icon: SiMongodb }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Service-Desk",
-        demo: "https://youtu.be/_bTyL3zbJE0",
+        live: "mollytech-service-desk.ralphmolina.dev",
+        youtube: "https://youtu.be/_bTyL3zbJE0",
         images: [serviceDeskImage],
         imageClass: "service-desk-image"
     },
@@ -73,7 +74,8 @@ const projects = [
             { name: "PostgreSQL", icon: SiPostgresql }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Inventory-Analytics-System",
-        demo: "https://youtu.be/4bUfA9BGEfk",
+        live: "mollytech-inventory-analytics.ralphmolina.dev",
+        youtube: "https://youtu.be/4bUfA9BGEfk",
         images: [inventoryImage],
         imageClass: "inventory-image"
     },
@@ -91,7 +93,7 @@ const projects = [
             { name: "MySQL", icon: SiMysql }
         ],
         github: "https://github.com/Mollytovvv/Barangay-Management-System",
-        demo: "https://youtu.be/GhK7YNUlTw4",
+        youtube: "https://youtu.be/GhK7YNUlTw4",
         images: [barangayImage],
         previewClass: "barangay-preview",
         imageClass: "barangay-image"
@@ -107,7 +109,7 @@ const projects = [
             { name: "SQL Server", icon: BsDatabaseFill }
         ],
         github: "https://github.com/Mollytovvv/Dormitory-Management-System",
-        demo: "https://youtu.be/ICBxDq11q1I",
+        youtube: "https://youtu.be/ICBxDq11q1I",
         images: [dormitoryImage],
         imageClass: "dormitory-image"
     }
@@ -181,11 +183,11 @@ export default function Projects() {
 
                                     <div className="project-carousel">
 
-                                    <img
-                                        src={project.images[activeImages[project.id] || 0]}
-                                        alt={`${project.title} preview`}
-                                        className={`${project.title === "MollyTech Inventory Analytics" ? "inventory-image" : ""}`}
-                                    />
+                                        <img
+                                            src={project.images[activeImages[project.id] || 0]}
+                                            alt={`${project.title} preview`}
+                                            className={`${project.title === "MollyTech Inventory Analytics" ? "inventory-image" : ""}`}
+                                        />
 
                                     </div>
 
@@ -249,21 +251,37 @@ export default function Projects() {
 
                                     </a>
 
-                                    <a
-                                        href={project.demo || "#"}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className={!project.demo ? "disabled" : ""}
-                                        onClick={(e) => {
-                                            if (!project.demo) e.preventDefault();
-                                        }}
-                                    >
+                                    {project.live && (
 
-                                        <FiExternalLink />
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
 
-                                        Live Demo
+                                            <FiExternalLink />
 
-                                    </a>
+                                            Live Application
+
+                                        </a>
+
+                                    )}
+
+                                    {project.youtube && (
+
+                                        <a
+                                            href={project.youtube}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+
+                                            <FiYoutube />
+
+                                            YouTube
+
+                                        </a>
+
+                                    )}
 
                                 </div>
 
