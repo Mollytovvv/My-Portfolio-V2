@@ -63,7 +63,7 @@
 .projects-grid {
     display: grid;
 
-    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 30px;
 
@@ -256,6 +256,7 @@
     transform: translateY(-2px);
 }
 
+
 /* =====================================
    ACTIONS
 ===================================== */
@@ -278,6 +279,7 @@
     gap: 8px;
 
     min-width: 0;
+    min-height: 48px;
 
     padding: 14px 20px;
 
@@ -301,8 +303,7 @@
 ===================================== */
 
 .project-actions:has(.live-application) {
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 
@@ -435,29 +436,6 @@
         text-align: center;
     }
 
-    @media(max-width:768px) {
-
-        .project-actions {
-            grid-template-columns: 1fr;
-
-            gap: 10px;
-        }
-
-        .project-actions a {
-            width: 100%;
-
-            padding: 13px 18px;
-
-            border-radius: 12px;
-
-            font-size: .9rem;
-        }
-
-        .project-actions a.demo-video {
-            grid-column: auto;
-        }
-
-    }
 
     /* ================================
        PROJECT GRID
@@ -545,15 +523,21 @@
     ================================ */
 
     .project-actions {
-        flex-direction: column;
+        display: grid;
+
+        grid-template-columns: 1fr;
 
         gap: 10px;
+
+        width: 100%;
     }
 
     .project-actions a {
         width: 100%;
+        min-width: 0;
+        min-height: 46px;
 
-        padding: 13px 18px;
+        padding: 13px 16px;
 
         border-radius: 12px;
 
@@ -729,7 +713,8 @@
 [data-theme="light"] .project-actions a.demo-video:hover {
     background: #f8fafc;
 
-    border-color: rgba(37,99,235,.30);
+    border-color: rgba(37,99,blue,.30);
 
     color: var(--text);
 }
+
