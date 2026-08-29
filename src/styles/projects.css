@@ -263,9 +263,9 @@
 .project-actions {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 12px;
+    gap: 14px;
 
     margin-top: auto;
 }
@@ -277,26 +277,70 @@
 
     gap: 8px;
 
-    min-height: 48px;
+    min-width: 0;
 
-    padding: 13px 18px;
+    padding: 14px 20px;
 
     border-radius: 14px;
 
-    font-size: .9rem;
-    font-weight: 650;
-
+    font-weight: 600;
     text-decoration: none;
 
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+    transition: all .25s ease;
 }
 
 .project-actions a svg {
+    flex-shrink: 0;
+
     font-size: 1rem;
+}
+
+
+/* =====================================
+   THREE BUTTON LAYOUT
+===================================== */
+
+.project-actions:has(.live-application) {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+
+/* =====================================
+   LIVE APPLICATION
+===================================== */
+
+.project-actions .live-application {
+    background: var(--primary);
+
+    color: #fff;
+}
+
+.project-actions .live-application:hover {
+    background: var(--primary-hover);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DEMO VIDEO
+===================================== */
+
+.project-actions .demo-video {
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: transparent;
+
+    color: var(--text);
+}
+
+.project-actions .demo-video:hover {
+    background: rgba(255,255,255,.04);
+
+    border-color: rgba(59,130,246,.35);
+
+    transform: translateY(-2px);
 }
 
 
@@ -307,67 +351,15 @@
 .project-actions a:first-child {
     border: 1px solid rgba(255,255,255,.08);
 
-    background: rgba(255,255,255,.025);
+    background: transparent;
 
     color: var(--text);
 }
 
 .project-actions a:first-child:hover {
-    background: rgba(255,255,255,.05);
-
-    border-color: rgba(59,130,246,.35);
-
-    transform: translateY(-2px);
-}
-
-
-/* =====================================
-   LIVE APPLICATION
-===================================== */
-
-.project-actions a.live-application {
-    position: relative;
-
-    background: var(--primary);
-
-    color: #fff;
-
-    border: 1px solid transparent;
-
-    box-shadow:
-        0 8px 24px rgba(59,130,246,.18);
-}
-
-.project-actions a.live-application:hover {
-    background: var(--primary-hover);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 12px 30px rgba(59,130,246,.28);
-}
-
-
-/* =====================================
-   DEMO VIDEO
-===================================== */
-
-.project-actions a.demo-video {
-    grid-column: 1 / -1;
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    background: transparent;
-
-    color: var(--text-secondary);
-}
-
-.project-actions a.demo-video:hover {
     background: rgba(255,255,255,.04);
 
-    border-color: rgba(255,255,255,.15);
-
-    color: var(--text);
+    border-color: rgba(59,130,246,.35);
 
     transform: translateY(-2px);
 }
@@ -453,8 +445,6 @@
 
         .project-actions a {
             width: 100%;
-
-            min-height: 46px;
 
             padding: 13px 18px;
 
