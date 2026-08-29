@@ -54,7 +54,7 @@ const projects = [
             { name: "MongoDB", icon: SiMongodb }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Service-Desk",
-        live: "YOUR-SERVICE-DESK-URL",
+        live: "https://mollytech-service-desk.ralphmolina.dev/",
         demo: "https://youtu.be/_bTyL3zbJE0",
         images: [serviceDeskImage],
         imageClass: "service-desk-image"
@@ -74,7 +74,7 @@ const projects = [
             { name: "PostgreSQL", icon: SiPostgresql }
         ],
         github: "https://github.com/Mollytovvv/MollyTech-Inventory-Analytics-System",
-        live: "https://mollytech-inventory-analytics.ralphmolina.dev",
+        live: "https://mollytech-inventory-analytics.ralphmolina.dev/login",
         demo: "https://youtu.be/4bUfA9BGEfk",
         images: [inventoryImage],
         imageClass: "inventory-image"
@@ -93,7 +93,7 @@ const projects = [
             { name: "MySQL", icon: SiMysql }
         ],
         github: "https://github.com/Mollytovvv/Barangay-Management-System",
-        youtube: "https://youtu.be/GhK7YNUlTw4",
+        demo: "https://youtu.be/GhK7YNUlTw4",
         images: [barangayImage],
         previewClass: "barangay-preview",
         imageClass: "barangay-image"
@@ -109,7 +109,7 @@ const projects = [
             { name: "SQL Server", icon: BsDatabaseFill }
         ],
         github: "https://github.com/Mollytovvv/Dormitory-Management-System",
-        youtube: "https://youtu.be/ICBxDq11q1I",
+        demo: "https://youtu.be/ICBxDq11q1I",
         images: [dormitoryImage],
         imageClass: "dormitory-image"
     }
