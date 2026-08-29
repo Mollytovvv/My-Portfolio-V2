@@ -389,7 +389,6 @@
 
 }
 
-
 /* =====================================
    MOBILE
 ===================================== */
@@ -517,16 +516,16 @@
         font-size: .85rem;
     }
 
+
     /* ================================
-    ACTIONS
+       ACTIONS
     ================================ */
 
     .project-actions {
-        display: grid;
+        display: flex;
+        flex-direction: column;
 
-        grid-template-columns: 1fr;
-
-        gap: 12px;
+        gap: 10px;
 
         width: 100%;
     }
@@ -563,9 +562,9 @@
 }
 
 
- /* =====================================
-    SMALL MOBILE
- ===================================== */
+/* =====================================
+   SMALL MOBILE
+===================================== */
 
 @media(max-width:400px) {
 
@@ -657,6 +656,9 @@
     ================================ */
 
     .project-actions {
+        display: flex;
+        flex-direction: column;
+
         gap: 10px;
 
         width: 100%;
