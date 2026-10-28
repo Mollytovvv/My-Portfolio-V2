@@ -41,7 +41,7 @@ const contacts = [
         title: "Resume",
         value: "Download Resume",
         icon: <FiDownload />,
-        link: "/resume.pdf"
+        link: "/CV Ralph Molina.pdf"
     }
 
 ];

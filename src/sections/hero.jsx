@@ -101,7 +101,7 @@ export default function Hero() {
                         </a>
 
                         <a
-                            href="https://www.ralphmolina.dev/resume.pdf"
+                            href="https://www.ralphmolina.dev/CV Ralph Molina.pdf"
                             className="secondary-btn"
                             download
                         >
